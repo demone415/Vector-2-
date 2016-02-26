@@ -119,18 +119,20 @@ bool operator!=(const Vector &left, const Vector &right) {
 }
 
 
-double Vector::operator[](unsigned long i) {
+double Vector::operator[](unsigned long i) const {
         return coords_[i];
 }
 
-double &Vector::operator[](unsigned long i) const {
-        return *this->coords_[i];
+double &Vector::operator[](unsigned long i) {
+        return *this.coords_[i];
 }
 
 Vector Vector::operator-() const {
         Vector a;
+        Vector b;
+        a = b;
         for(int i = 0; i <= n; i++) {
-                a.coords_[i] = 0 - *this.coords[i];
+                a.coords_[i] = 0 - b.coords_[i]; //*this.coords[i];
         }
         return a;
 }
