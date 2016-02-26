@@ -10,9 +10,9 @@ Vector::Vector() { //DE_STROYED
         }
 }
 
-Vector::Vector(double n) {
+Vector::Vector(double a) {
         for(int i = 0; i < n; i++) {
-                coords_[i] = n;
+                coords_[i] = a;
         }
 }
 
