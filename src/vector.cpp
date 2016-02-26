@@ -4,7 +4,7 @@
 
 #include "../include/vector.h"
 
-Vector::Vector() {
+Vector::Vector() { //DE_STROYED
         for(int i = 0; i < n; i++) {
                 coords_[i] = 0.0;
         }
