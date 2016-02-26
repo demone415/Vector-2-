@@ -94,7 +94,7 @@ Vector operator/(const Vector &left, double right) {
 }
 
 double operator^(const Vector &left, const Vector &right) {
-        double a;
+        double a = 0.0;
         for(int i = 0; i < Vector::n; i++) {
                 a += left.coords_[i] * right.coords_[i];
         }
