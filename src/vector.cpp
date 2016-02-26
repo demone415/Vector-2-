@@ -99,9 +99,10 @@ double operator^(const Vector &left, const Vector &right) {
                 a += left.coords_[i] * right.coords_[i];
         }
         return a;
+        
+}
 
-
-Vector::friend bool operator==(const Vector &left, const Vector &right) {
+bool operator==(const Vector &left, const Vector &right) {
         bool flag = false;
         for(int i = 0; i <= n; i++) {
                 if(left.coords_[i] == right.coord_[i]) {
@@ -113,7 +114,7 @@ Vector::friend bool operator==(const Vector &left, const Vector &right) {
         return flag;
 }
 
-Vector::friend bool operator!=(const Vector &left, const Vector &right) {
+bool operator!=(const Vector &left, const Vector &right) {
         bool flag = false;
         for(int i = 0; i <= n; i++) {
                 if(left.coords_[i] != right.coord_[i]) {
