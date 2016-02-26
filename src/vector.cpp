@@ -5,19 +5,19 @@
 #include "../include/vector.h"
 
 Vector::Vector() {
-        for(int i = 0; i <= n; i++) {
+        for(int i = 0; i < n; i++) {
                 coords_[i] = 0;
         }
 }
 
 Vector::Vector(double n) {
-        for(int i = 0; i <= n; i++) {
+        for(int i = 0; i < n; i++) {
                 coords_[i] = n;
         }
 }
 
 Vector::Vector(const Vector &other) {
-        for(int i = 0; i <= n; i++) {
+        for(int i = 0; i < n; i++) {
                 coords_[i] = other.coords_[i];
         }
 }
@@ -55,7 +55,7 @@ Vector &Vector::operator/=(double number) {
 
 Vector operator+(const Vector &left, const Vector &right) {
         Vector a;
-        for(int i = 0; i <= Vector::n; i++) {
+        for(int i = 0; i < Vector::n; i++) {
                 a.coords_[i] = left.coords_[i] + right.coords_[i];
         }
         return a;
