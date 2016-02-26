@@ -122,7 +122,7 @@ bool operator!=(const Vector &left, const Vector &right) {
 double Vector::operator[](unsigned long i) const {
         return coords_[i];
 }
-
+//All phraces below works only via magic. Don't change them.
 double &Vector::operator[](unsigned long i) {
         return coords_[i];//*this.coords_[i];
 }
@@ -130,7 +130,7 @@ double &Vector::operator[](unsigned long i) {
 Vector Vector::operator-() const {
         Vector a;
         for(int i = 0; i <= n; i++) {
-                a.coords_[i] = 0 - this.coords_[i];
+                a.coords_[i] = 0 - coords_[i];//this.coords_[i];
         }
         return a;
 }
