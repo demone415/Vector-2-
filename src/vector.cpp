@@ -63,7 +63,7 @@ Vector operator+(const Vector &left, const Vector &right) {
 
 Vector operator-(const Vector &left, const Vector &right) {
         Vector a;
-        for(int i = 0; i <= Vector::n; i++) {
+        for(int i = 0; i < Vector::n; i++) {
                 a.coords_[i] = left.coords_[i] - right.coords_[i];
         }
         return a;
@@ -71,7 +71,7 @@ Vector operator-(const Vector &left, const Vector &right) {
 
 Vector operator*(const Vector &left, double right) {
         Vector a;
-        for(int i = 0; i <= Vector::n; i++) {
+        for(int i = 0; i < Vector::n; i++) {
                 a.coords_[i] = left.coords_[i] * right;
         }
         return a;
@@ -79,7 +79,7 @@ Vector operator*(const Vector &left, double right) {
 
 Vector operator*(double left, const Vector &right) {
         Vector a;
-        for(int i = 0; i <= Vector::n; i++) {
+        for(int i = 0; i < Vector::n; i++) {
                 a.coords_[i] = left * right.coords_[i];
         }
         return a;
@@ -87,7 +87,7 @@ Vector operator*(double left, const Vector &right) {
 
 Vector operator/(const Vector &left, double right) {
         Vector a;
-        for(int i = 0; i <= Vector::n; i++) {
+        for(int i = 0; i < Vector::n; i++) {
                 a.coords_[i] = left.coords_[i] / right;
         }
         return a;
@@ -95,7 +95,7 @@ Vector operator/(const Vector &left, double right) {
 
 double operator^(const Vector &left, const Vector &right) {
         double a;
-        for(int i = 0; i <= Vector::n; i++) {
+        for(int i = 0; i < Vector::n; i++) {
                 a += left.coords_[i] * right.coords_[i];
         }
         return a;
@@ -104,7 +104,7 @@ double operator^(const Vector &left, const Vector &right) {
 
 bool operator==(const Vector &left, const Vector &right) {
         bool flag = false;
-        for(int unsigned i = 0; i <= Vector::n; i++) {
+        for(int unsigned i = 0; i < Vector::n; i++) {
                 if(left.coords_[i] == right.coords_[i]) {
                         flag = true;
                 } else {
