@@ -6,7 +6,7 @@
 
 Vector::Vector() {
         for(int i = 0; i < n; i++) {
-                coords_[i] = 0;
+                coords_[i] = 1;
         }
 }
 
