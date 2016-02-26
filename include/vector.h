@@ -1,17 +1,27 @@
+//
+//File vector.h
+//
+
 #ifndef VECTOR_H
 #define VECTOR_H
 
 class Vector {
+
 public:
-  const static unsigned long n = 3;
+   const static unsigned long n = 3;
 
+private:
+   double coords_[n];   
+
+public:
+  
   Vector();
-
+  
   explicit Vector(double);
-
+        
   Vector(const Vector &);
 
-  Vector &operator=(const Vector &);
+  Vector &operator=(const Vector &);                  
 
   double operator[](unsigned long i) const;
 
@@ -41,8 +51,7 @@ public:
 
   Vector operator-() const;
 
-private:
-  double coords_[n];
+
 }; // class Vector
 
 bool operator!=(const Vector &, const Vector &);
