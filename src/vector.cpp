@@ -124,13 +124,13 @@ double Vector::operator[](unsigned long i) const {
 }
 
 double &Vector::operator[](unsigned long i) {
-        return *this.coords_[i];
+        return coords_[i];//*this.coords_[i];
 }
 
 Vector Vector::operator-() const {
         Vector a;
         for(int i = 0; i <= n; i++) {
-                a.coords_[i] = 0 - this.coords[i];
+                a.coords_[i] = 0 - this.coords_[i];
         }
         return a;
 }
