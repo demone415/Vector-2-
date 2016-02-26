@@ -53,7 +53,7 @@ Vector &Vector::operator/=(double number) {
     return *this;
 }
 
-Vector::friend Vector operator+(const Vector &left, const Vector &right) {
+Vector operator+(const Vector &left, const Vector &right) {
         Vector a;
         for(int i = 0; i <= n; i++) {
                 a.coords_[i] = left.coords_[i] + right.coords_[i];
@@ -61,7 +61,7 @@ Vector::friend Vector operator+(const Vector &left, const Vector &right) {
         return a;
 }
 
-Vector::friend Vector operator-(const Vector &left, const Vector &right) {
+Vector operator-(const Vector &left, const Vector &right) {
         Vector a;
         for(int i = 0; i <= n; i++) {
                 a.coords_[i] = left.coords_[i] - right.coords_[i];
@@ -69,7 +69,7 @@ Vector::friend Vector operator-(const Vector &left, const Vector &right) {
         return a;
 }
 
-Vector::friend Vector operator*(const Vector &left, double right) {
+Vector operator*(const Vector &left, double right) {
         Vector a;
         for(int i = 0; i <= n; i++) {
                 a.coords_[i] = left.coords_[i] * right;
@@ -77,7 +77,7 @@ Vector::friend Vector operator*(const Vector &left, double right) {
         return a;
 }
 
-Vector::friend Vector operator*(double left, const Vector &right) {
+Vector operator*(double left, const Vector &right) {
         Vector a;
         for(int i = 0; i <= n; i++) {
                 a.coords_[i] = left * right.coords_[i];
@@ -85,7 +85,7 @@ Vector::friend Vector operator*(double left, const Vector &right) {
         return a;
 }
 
-Vector::friend Vector operator/(const Vector &left, double right) {
+Vector operator/(const Vector &left, double right) {
         Vector a;
         for(int i = 0; i <= n; i++) {
                 a.coords_[i] = left.coords_[i] / right
@@ -93,7 +93,7 @@ Vector::friend Vector operator/(const Vector &left, double right) {
         return a;
 }
 
-Vector::friend double operator^(const Vector &left, const Vector &right) {
+double operator^(const Vector &left, const Vector &right) {
         double a;
         for(int i = 0; i <= n; i++) {
                 a += left.coords_[i] * right.coords_[i];
