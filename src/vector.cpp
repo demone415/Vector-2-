@@ -129,7 +129,7 @@ double &Vector::operator[](unsigned long i) {
 
 Vector Vector::operator-() const {
         Vector a;
-        for(int i = 0; i <= n; i++) {
+        for(int i = 0; i < n; i++) {
                 a.coords_[i] = 0 - coords_[i];//this.coords_[i];
         }
         return a;
