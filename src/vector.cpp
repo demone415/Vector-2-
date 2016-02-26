@@ -115,7 +115,7 @@ bool operator==(const Vector &left, const Vector &right) {
 }
 
 bool operator!=(const Vector &left, const Vector &right) {
-        return !(current == other);
+        return !(left == right);
 }
 
 
@@ -124,7 +124,7 @@ double Vector::operator[](unsigned long i) {
 }
 
 double &Vector::operator[](unsigned long i) const {
-        return *this.coords_[i];
+        return *this->coords_[i];
 }
 
 Vector Vector::operator-() const {
