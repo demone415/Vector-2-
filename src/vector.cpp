@@ -104,7 +104,7 @@ double operator^(const Vector &left, const Vector &right) {
 
 bool operator==(const Vector &left, const Vector &right) {
         bool flag = false;
-        for(int i = 0; i <= Vector::n; i++) {
+        for(int unsigned i = 0; i <= Vector::n; i++) {
                 if(left.coords_[i] == right.coords_[i]) {
                         flag = true;
                 } else {
@@ -115,30 +115,22 @@ bool operator==(const Vector &left, const Vector &right) {
 }
 
 bool operator!=(const Vector &left, const Vector &right) {
-        bool flag = false;
-        for(int i = 0; i <= Vector::n; i++) {
-                if(left.coords_[i] != right.coords_[i]) {
-                        flag = true;
-                } else {
-                        flag = false;
-                }
-        }
-        return flag;
+        return !(current == other);
 }
 
 
-double operator[](insigned long i) {
+double Vector::operator[](unsigned long i) {
         return coords_[i];
 }
 
-double &operator[](insigned long i) const {
+double &Vector::operator[](unsigned long i) const {
         return *this.coords_[i];
 }
 
 Vector Vector::operator-() const {
         Vector a;
         for(int i = 0; i <= n; i++) {
-                a[i] = 0 - *this.coords[i];
+                a.coords_[i] = 0 - *this.coords[i];
         }
         return a;
 }
