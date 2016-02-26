@@ -29,32 +29,28 @@ Vector &Vector::operator=(const Vector &other) {
     return *this;
 }
 
-Vector::Vector &operator+=(const Vector &other) {
-        for(int i = 0; i <= n; i++) {
-                coords_[i] += other.coords_[i];
-        }
-        return *this
+Vector &Vector::operator+=(const Vector &other) {
+    for (unsigned int i = 0; i < n; i++)
+        coords_[i] += other.coords_[i];
+    return *this;
 }
 
-Vector::Vector &operator-=(const Vector &other) {
-        for(int i = 0; i <= n; i++) {
-                coords_[i] -= other.coords_[i];
-        }
-        return *this;
+Vector &Vector::operator-=(const Vector &other) {
+    for (unsigned int i = 0; i < n; i++)
+        coords_[i] -= other.coords_[i];
+    return *this;
 }
 
-Vector::Vector &operator*=(double other) {
-        for(int i = 0; i <= n; i++) {
-                coords_[i] *= other;
-        }
-        return *this;
+Vector &Vector::operator*=(double number) {
+    for (unsigned int i = 0; i < n; i++)
+        coords_[i] *= number;
+    return *this;
 }
 
-Vector::Vector &operator/=(double other) {
-        for(int i = 0; i <= n; i++) {
-                coords_[i] /= other;
-        }
-        return *this;
+Vector &Vector::operator/=(double number) {
+    for (unsigned int i = 0; i < n; i++)
+        coords_[i] /= number;
+    return *this;
 }
 
 Vector::friend Vector operator+(const Vector &left, const Vector &right) {
