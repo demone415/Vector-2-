@@ -22,11 +22,11 @@ Vector::Vector(const Vector &other) {
         }
 }
 
-Vector::Vector &operator=(const Vector &other) {
-        for(int i = 0; i <= n; i++) {
-                coords_[i] = other.coords_[i];
-        }
-        return *this;
+Vector &Vector::operator=(const Vector &other) {
+    for (unsigned int i = 0; i < n; i++) {
+        coords_[i] = other.coords_[i];
+    }
+    return *this;
 }
 
 Vector::Vector &operator+=(const Vector &other) {
